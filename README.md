@@ -27,12 +27,15 @@ Figure 1. VQA Sample
 # Background
 Alex K. Et al firstly accomplished the high-level convolutional neuron network, after that Y.jia.Et al made it possible to Use Caffe deep learning to accelerate the optimization of the model,Stanislaw A. Et al. Combined encoding and NLP to accomplish VQA including the result of extracting the mean of a picture made by Lawrence et al
 # Approach
-Our basic VQA model is according to VQA, the only modification depends on special case of this project---abstract images and ‘yes’ or ‘no’ answers. The CNN we used for image encoding is a simplification of VGG\_CNN\_F which has the same structure as Alexnet, but here, we made a little difference.
-The CNN model consists of 5-layer convolutional neuron network, 3 max pooling layers and 2 full-connected layers. The core of the first layer is 11×11, the stride is 4, and the total cores are 64. The second-layer core is 5×5, stride 1, the total are 256, and the last 3 layers cores are 3×3, total is 256, see figure2.
-And there is a normalization layer called ReLu  that is in the back of each convolutional neuron network, which is used to normalize features.
-What’s more, the max pooling layer is located behind the 1st, 2nd  and the 5th layer, which are used to minimize the influence of transformation.
-The dimension of the 2-layer full-connected is 4096 and the output of the second-layer full-connected will be the final result of image encoding.
-After that,  we used 2-layer and 512 dimension RNN+LSTM network to build a NLP model based on VQA, the dimension of the final output is also 1024.
+* Our basic VQA model is according to VQA, the only modification depends on special case of this project---abstract images and ‘yes’ or ‘no’ answers. 
+* The CNN we used for image encoding is a simplification of VGG\_CNN\_F which has the same structure as Alexnet, but here, we made a little difference.
+* The CNN model consists of 5-layer convolutional neuron network, 3 max pooling layers and 2 full-connected layers. 
+	* The core of the first layer is 11×11, the stride is 4, and the total cores are 64. 
+	* The second-layer core is 5×5, stride 1, the total are 256, and the last 3 layers cores are 3×3, total is 256, see figure2.
+* And there is a normalization layer called ReLu  that is in the back of each convolutional neuron network, which is used to normalize features.
+* What’s more, the max pooling layer is located behind the 1st, 2nd  and the 5th layer, which are used to minimize the influence of transformation.
+* The dimension of the 2-layer full-connected is 4096 and the output of the second-layer full-connected will be the final result of image encoding.
+* After that,  we used 2-layer and 512 dimension RNN+LSTM network to build a NLP model based on VQA, the dimension of the final output is also 1024.
 Finally both the image and question features are transformed into a common space and fused via the full-connected layer followed by a 2-layer softmax layer and we got the final ‘Yes’ or ‘No’ result of a question.
 
 
@@ -136,6 +139,5 @@ We made overall 4% improvement through parameter optimization, and 1% improvemen
 > [5] C. Lawrence Zitnick. Bringing Semantics Into Focus Using Visual Abstraction, CVPR, 2013
 
 > [6] N. Srivastava, G. Hinton, Dropout: A Simple Way to Prevent Neural Networks from Overftting. Journal of Machine Learning Research 15 (2014) 1929-1958
-
 
 

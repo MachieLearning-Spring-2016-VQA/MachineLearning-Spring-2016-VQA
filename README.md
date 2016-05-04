@@ -1,28 +1,50 @@
 # MachineLearning-Spring-2016-VQA
+# Authors:
+* [@Jia Wang](https://github.com/waalwang)       Email: jia_wang2@student.uml.edu
+* [@Yufeng Yuan](https://github.com/FrankeyYuan) Email: Yufeng_Yuan@student.uml.edu
+* [@Duo Liu](https://github.com/DuoL)            Email:Duo_Liu@student.uml.edu
+
  ***Abstract here***
  
 Visual Question Answering
-# Contibuters
-* [@Jia Wang](https://github.com/waalwang)
-* [@Yufeng Yuan](https://github.com/FrankeyYuan)
-* [@Duo Liu](https://github.com/DuoL)
 
 # Goal
 
-Given a picture and a open-end question, output ***yes*** or ***no*** for this question.
+The task of this project is given a abstract image and a natural language question about the image, output ***yes*** or ***no*** for this question. There will be 3000 test images and for each image, there will be three different questions about the image, and we are trying to get a higher accuarcy for test.
+Figure 1 is a sample, the question for this image is "Is the dog chasing the butterfly?", test the image and question in our trained model, gives the answer "yes" for this question.
 
-Sample questions
-
+question:Is the dog chasing the butterfly?  Answer: Yes<br>
 <img src="/image/sample_image.png" width= "440" heigth="288">
 
-question:Is the dog chasing the butterfly?
+Figure 1. VQA Sample
+<!--question:Is the dog chasing the butterfly?-->
 
-Answer: Yes
+<!--Answer: Yes-->
 
 # Introduction
 # Background
+Alex K. Et al firstly accomplished the high-level convolutional neuron network, after that Y.jia.Et al made it possible to Use Caffe deep learning to accelerate the optimization of the model,Stanislaw A. Et al. Combined encoding and NLP to accomplish VQA including the result of extracting the mean of a picture made by Lawrence et al
 # Approach
+Our basic VQA model is according to VQA, the only modification depends on special case of this project---abstract images and ‘yes’ or ‘no’ answers. The CNN we used for image encoding is a simplification of VGG\_CNN\_F which has the same structure as Alexnet, but here, we made a little difference.
+The CNN model consists of 5-layer convolutional neuron network, 3 max pooling layers and 2 full-connected layers. The core of the first layer is 11×11, the stride is 4, and the total cores are 64. The second-layer core is 5×5, stride 1, the total are 256, and the last 3 layers cores are 3×3, total is 256, see figure2.
+And there is a normalization layer called ReLu  that is in the back of each convolutional neuron network, which is used to normalize features.
+What’s more, the max pooling layer is located behind the 1st, 2nd  and the 5th layer, which are used to minimize the influence of transformation.
+The dimension of the 2-layer full-connected is 4096 and the output of the second-layer full-connected will be the final result of image encoding.
+After that,  we used 2-layer and 512 dimension RNN+LSTM network to build a NLP model based on VQA, the dimension of the final output is also 1024.
+Finally both the image and question features are transformed into a common space and fused via the full-connected layer followed by a 2-layer softmax layer and we got the final ‘Yes’ or ‘No’ result of a question.
+
+Figure 2.5-Layer (CNN + SLTM)<br>
 <img src="/image/model.png" width="636", height="342">
+
+## Specific training method:
+We use cross-validation to evaluate the test loss because the ground truth test set is not available on kaggle competition. 
+We can ignore the little difference on using cross-validation because we only randomly pick 500 images which are 3% of all the images.
+During the cross-validation we use the recommended formula to calculate the accuracy, that is we use following formula to answer  a non-deterministic question.
+
+![evaluation](/image/evaluation.png)
+
+We found the key point to improvement after the first training and figured out a way to deal with this problem. We will talk about this in detail in the later chapters.
+
 # Dataset
 All Data are provided by [Kaggle Visual Question Answering](https://inclass.kaggle.com/c/visual-question-answering/data).
 ## Data Files

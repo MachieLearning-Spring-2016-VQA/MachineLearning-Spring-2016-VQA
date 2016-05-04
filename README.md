@@ -13,7 +13,10 @@
 # Goal
 
 The task of this project is given a abstract image and a natural language question about the image, output ***yes*** or ***no*** for this question. There will be 3000 test images and for each image, there will be three different questions about the image, and we are trying to get a higher accuarcy for test.
-Figure 1 is a sample, the question for this image is "Is the dog chasing the butterfly?", test the image and question in our trained model, gives the answer "yes" for this question.
+* Figure 1 is a sample 
+	* question for this image is "Is the dog chasing the butterfly?"
+	* Test the image and question in our trained model
+	* Answer is "yes" for this question.
 
 question:Is the dog chasing the butterfly?  Answer: Yes<br>
 <img src="/image/sample_image.png" width= "440" heigth="288">

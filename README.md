@@ -31,7 +31,7 @@ Alex K. Et al firstly accomplished the high-level convolutional neuron network, 
 * The CNN we used for image encoding is a simplification of VGG\_CNN\_F which has the same structure as Alexnet, but here, we made a little difference.
 * The CNN model consists of 5-layer convolutional neuron network, 3 max pooling layers and 2 full-connected layers. 
 	* The core of the first layer is 11×11, the stride is 4, and the total cores are 64. 
-	* The second-layer core is 5×5, stride 1, the total are 256, and the last 3 layers cores are 3×3, total is 256, see figure2.
+	* The second-layer core is 5×5, stride 1, the total are 256, and the last 3 layers cores are 3×3, total is 256, see figure2.5-Layer (CNN + SLTM).
 * And there is a normalization layer called ReLu  that is in the back of each convolutional neuron network, which is used to normalize features.
 * What’s more, the max pooling layer is located behind the 1st, 2nd  and the 5th layer, which are used to minimize the influence of transformation.
 * The dimension of the 2-layer full-connected is 4096 and the output of the second-layer full-connected will be the final result of image encoding.

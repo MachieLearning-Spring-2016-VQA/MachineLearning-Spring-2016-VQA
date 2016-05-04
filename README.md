@@ -10,8 +10,8 @@
  
 <!--Visual Question Answering-->
 
-# Goal
 
+# Introduction
 The task of this project is given a abstract image and a natural language question about the image, output ***yes*** or ***no*** for this question. There will be 3000 test images and for each image, there will be three different questions about the image, and we are trying to get a higher accuarcy for test.
 Figure 1 is a sample, the question for this image is "Is the dog chasing the butterfly?", test the image and question in our trained model, gives the answer "yes" for this question.
 
@@ -23,12 +23,15 @@ Figure 1. VQA Sample
 
 <!--Answer: Yes-->
 
-# Introduction
+# Goal
+
+Accuracy > 70%
+
 # Background
-Alex K. Et al firstly accomplished the high-level convolutional neuron network, after that Y.jia.Et al made it possible to Use Caffe deep learning to accelerate the optimization of the model,Stanislaw A. Et al. Combined encoding and NLP to accomplish VQA including the result of extracting the mean of a picture made by Lawrence et al
+Alex K. Et al.***[2]*** firstly accomplished the deep-level convolutional neuron network, after that Y.jia Et al.***[4]*** made it possible to Use Caffe deep learning framework to accelerate the optimization of the model, Stanislaw A. Et al.***[1]*** Combined image encoding and NLP to accomplish VQA including the result of extracting the semantics of image made by Lawrence et al.***[5]***
 # Approach
 * Our basic VQA model is according to VQA, the only modification depends on special case of this project---abstract images and ‘yes’ or ‘no’ answers. 
-* The CNN we used for image encoding is a simplification of VGG\_CNN\_F which has the same structure as Alexnet, but here, we made a little difference.
+* The CNN we used for image encoding is a simplification of [VGG\_CNN\_F](https://gist.github.com/ksimonyan/a32c9063ec8e1118221a#file-readme-md)***[3]*** which has the same structure as Alexnet, but here, we made a little difference.
 * The CNN model consists of 5-layer convolutional neuron network, 3 max pooling layers and 2 full-connected layers. 
 	* The core of the first layer is 11×11, the stride is 4, and the total cores are 64. 
 	* The second-layer core is 5×5, stride 1, the total are 256, and the last 3 layers cores are 3×3, total is 256, see figure2.5-Layer (CNN + SLTM).
@@ -84,7 +87,7 @@ Above data and clues are very important for our further work, such as parameter 
 Our initial run showed some very initial result, like 75.18% accuracy; verified some parameters workable, like 5e-4 learning rate making training loss smoothly decreasing. On the other hand, it showed we still had room to improve as well, like overfitting occurrence at iter #10000; And once overfitting negatively impacts training process, the training loss will no long true. So we need to optimize parameters to fix the negative effect of overfitting as possible; meanwhile, we need to try to optimize gradient descent to make training loss converge the optimal point continuously even at big training iterations.
 
 Therefore, based on above analysis, we tried to do optimization in following 2 ways:
-###Kill overfitting. We made it by using dropout.
+###Kill overfitting. We made it by using dropout***[6]***.
 Dropout means that we can temporarily remove some units out from the network along with all their incoming and outgoing connections, and the choice of which units to drop is random[1]. A ‘thinned’ network after applying dropout can prevent co-adaptation of units efficiently and then result in a more robust classifier. Figure 4 gives the comparison before and after applying dropout to a Neural Net. 
 
 <img src="/image/dropout.png">
@@ -127,6 +130,13 @@ We made overall 4% improvement through parameter optimization, and 1% improvemen
 
 # Conclusion
 <!--# Acknowledgement-->
+
+1.	More data means better performance.
+
+2.	Parameters optimization and fine-tuning leads to at least 5% improvement of  performance
+
+3.	Real images + open ending = more interesting challenge.
+
 # Reference
 > [1] Stanislaw Antol, Aishwarya Agrawal, Jiasen Lu, Margaret Mitchell,Dhruv Batra, C. Lawrence Zitnick, Devi Parik. VQA: Visual Question Answering, 2016
 

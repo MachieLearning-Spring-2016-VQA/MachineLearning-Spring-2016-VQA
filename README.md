@@ -15,8 +15,8 @@
 The task of this project is given a abstract image and a natural language question about the image, output ***yes*** or ***no*** for this question. There will be 3000 test images and for each image, there will be three different questions about the image, and we are trying to get a higher accuarcy for test.
 * Figure 1 is a sample 
 	* question for this image is "Is the dog chasing the butterfly?"
-	* <img src="/image/sample_image.png" width= "440" heigth="288">
-	<br>Figure 1. VQA Sample
+			<img src="/image/sample_image.png" width= "440" heigth="288">
+			<br>Figure 1. VQA Sample
 	* Test the image and question in our trained model
 	* Answer is "yes" for this question.
 	
@@ -25,9 +25,8 @@ The task of this project is given a abstract image and a natural language questi
 ## Background
 Alex K. Et al firstly accomplished the high-level convolutional neuron network, after that Y.jia.Et al made it possible to Use Caffe deep learning to accelerate the optimization of the model,Stanislaw A. Et al. Combined encoding and NLP to accomplish VQA including the result of extracting the mean of a picture made by Lawrence et al
 ## Approach
-<img src="/image/model.png" width="636", height="342">
-
-	Figure 2.5-Layer (CNN + SLTM)<br>
+	<img src="/image/model.png" width="700", height="400">
+	Figure 2.5-Layer (CNN + SLTM)
 
 * Our basic VQA model is according to VQA, the only modification depends on special case of this project---abstract images and ‘yes’ or ‘no’ answers. 
 * The CNN we used for image encoding is a simplification of VGG\_CNN\_F which has the same structure as Alexnet, but here, we made a little difference.

@@ -139,11 +139,11 @@ We made overall 4% improvement through parameter optimization, and 1% improvemen
 
 # Team Roles
 
-Jia Wang ———————————— model selection, parameter optimization/fine tuning proposal and implementation, coding for training, and paper work.
+Jia Wang -------- model selection, parameter optimization/fine tuning proposal and implementation, coding for training, and paper work.
 
-Duo Liu ———————————— project environment setup, experiments' data statistics and analysis, spreadsheet and paper work.
+Duo Liu -------- project environment setup, experiments' data statistics and analysis, spreadsheet and paper work.
 
-Yufeng Yuan ———————————— Dataset analysis, data preprocessing, coding for evaluation and other utilities, spreadsheet and paper work.
+Yufeng Yuan -------- Dataset analysis, data preprocessing, coding for evaluation and other utilities, spreadsheet and paper work.
 
 # Reference
 > [1] Stanislaw Antol, Aishwarya Agrawal, Jiasen Lu, Margaret Mitchell,Dhruv Batra, C. Lawrence Zitnick, Devi Parik. VQA: Visual Question Answering, 2016

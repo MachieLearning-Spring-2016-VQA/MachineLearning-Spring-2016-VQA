@@ -119,7 +119,7 @@ We made overall 4% improvement through parameter optimization, and 1% improvemen
 
 
 |Result/Methods|Parameters Optimization| Fine-tuning |Accuracy Official(Kaggle)|
-|———————|———————————|——————|————————————|
+|--------------|-----------------------|-------------|-------------------------|
 |Original|X|X|75.18%(65.38%)|
 |Mid-result|√|X|79.13%(69.40%)|
 |Final|√|√|80.06%(70.99%)|
@@ -129,7 +129,7 @@ We made overall 4% improvement through parameter optimization, and 1% improvemen
 
 
 # Conclusion
-<!————————————# Acknowledgement————————————>
+<!--# Acknowledgement-->
 
 1.	More data means better performance.
 

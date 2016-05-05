@@ -150,10 +150,10 @@ Yufeng Yuan -------- Dataset analysis, data preprocessing, coding for evaluation
 
 > [2] Y Jia, E Shelhamer, J Donahue, S Karayev, Caffe: Convolutional architecture for fast feature embedding, Proceedings of the 22nd ACM international conference on Multimedia
 
-> [3] C. Lawrence Zitnick. Bringing Semantics Into Focus Using Visual Abstraction, CVPR, 2013  
+> [3] Stanislaw Antol, Aishwarya Agrawal, Jiasen Lu, Margaret Mitchell,Dhruv Batra, C. Lawrence Zitnick, Devi Parik. VQA: Visual Question Answering, 2016
 
-> [4]  Stanislaw Antol, Aishwarya Agrawal, Jiasen Lu, Margaret Mitchell,Dhruv Batra, C. Lawrence Zitnick, Devi Parik. VQA: Visual Question Answering, 2016
+> [4] C. Lawrence Zitnick. Bringing Semantics Into Focus Using Visual Abstraction, CVPR, 2013
 
-> [5]  K. Chatfield, K. Simonyan, A. Vedaldi, A. Zisserman, Return of the Devil in the Details: Delving Deep into Convolutional Nets. British Machine Vision Conference, 2014
+> [5] K. Chatfield, K. Simonyan, A. Vedaldi, A. Zisserman, Return of the Devil in the Details: Delving Deep into Convolutional Nets. British Machine Vision Conference, 2014
 
 > [6] N. Srivastava, G. Hinton, Dropout: A Simple Way to Prevent Neural Networks from Overftting. Journal of Machine Learning Research 15 (2014) 1929-1958

@@ -47,7 +47,7 @@ Finally both the image and question features are transformed into a common space
 Figure 2.5-Layer (CNN + SLTM)<br>
 ## Specific training method:
 We use cross-validation to evaluate the test loss because the ground truth test set is not available on kaggle competition. 
-We can ignore the little difference on using cross-validation because we only randomly pick 500 images which are 3% of all the images.
+Ignoring the little difference on using cross-validation is needed because we only randomly pick 500 images which are 3% of all the images.
 During the cross-validation we use the recommended formula to calculate the accuracy, that is we use following formula to answer  a non-deterministic question.
 
 ![evaluation](/image/evaluation.png)
@@ -84,7 +84,8 @@ Above data and clues are very important for our further work, such as parameter 
 <img src="/image/initial_run_result.png" width="600", height="550">
 <br>Figure 3. Initial Run Result
 ## Parameter Optimization
-Our initial run showed some very initial result, like 75.18% accuracy; verified some parameters workable, like 5e-4 learning rate making training loss smoothly decreasing. On the other hand, it showed we still had room to improve as well, like overfitting occurrence at iter #10000; And once overfitting negatively impacts training process, the training loss will no long true. So we need to optimize parameters to fix the negative effect of overfitting as possible; meanwhile, we need to try to optimize gradient descent to make training loss converge the optimal point continuously even at big training iterations.
+* Our initial run showed some very initial result, like 75.18% accuracy; verified some parameters workable, like 5e-4 learning rate making training loss smoothly decreasing. On the other hand, it showed we still had room to improve as well, like overfitting occurrence at iter #10000; And once overfitting negatively impacts training process, the training loss will no long true. 
+* So we need to optimize parameters to fix the negative effect of overfitting as possible; meanwhile, we need to try to optimize gradient descent to make training loss converge the optimal point continuously even at big training iterations.
 
 Therefore, based on above analysis, we tried to do optimization in following 2 ways:
 ###Kill overfitting. We made it by using dropout.

@@ -1,11 +1,11 @@
 code copyrights clarification:
 
-data/vqa_preprocessing.py 						---- author: VQA, modified by jia wang
-train_.lua 										---- author: VQA, modified by jia wang
-prepro_img.lua 									---- author: VQA, modified by jia wang
-prepro.py										---- author: VQA, modified by jia wang
-vqa_test_rate_fastest/vqa_test_rate_update.py	---- author: Yufeng Yuan
-misc/*											---- author: facebook torch team/VQA
+1.	data/vqa_preprocessing.py 			---- author: VQA, modified by jia wang
+2.	train_.lua 		 			---- author: VQA, modified by jia wang
+3.	prepro_img.lua 					---- author: VQA, modified by jia wang
+4.	prepro.py					---- author: VQA, modified by jia wang
+5.	vqa_test_rate_fastest/vqa_test_rate_update.py	---- author: Yufeng Yuan
+6.	misc/*						---- author: facebook torch team/VQA
 
 
 

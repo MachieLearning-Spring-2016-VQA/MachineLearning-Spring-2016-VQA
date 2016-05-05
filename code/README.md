@@ -1,4 +1,4 @@
-code copyrights clarification:
+Code copyrights:
 
 1.	data/vqa_preprocessing.py 			---- author: VQA, modified by jia wang
 2.	train_.lua 		 			---- author: VQA, modified by jia wang
@@ -12,14 +12,15 @@ code copyrights clarification:
 Installation:
 
 0. before doing preprocessing job, you need to install torch7/python2.7/cuda and other dependencies at first.
-	torch7: 	http://torch.ch/
 
-	cuda:		https://developer.nvidia.com/cuda-zone
+	[torch7](http://torch.ch/)
+
+	[cuda](https://developer.nvidia.com/cuda-zone)
 	
-	python2.7:	https://www.python.org/download/releases/2.7
+	[python2.7](https://www.python.org/download/releases/2.7)
 
-1. plz check VQA official website for preprocessing.
-	https://github.com/VT-vision-lab/VQA_LSTM_CNN
+1. plz check [VQA official website](https://github.com/VT-vision-lab/VQA_LSTM_CNN) for preprocessing.
+	
 	
 2. when all .h5 and .json files are ready, you can use below command to run training:
 

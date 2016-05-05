@@ -25,9 +25,7 @@ The task of this project is given a abstract image and a natural language questi
 ## Background
 Alex K. Et al firstly accomplished the high-level convolutional neuron network, after that Y.jia.Et al made it possible to Use Caffe deep learning to accelerate the optimization of the model,Stanislaw A. Et al. Combined encoding and NLP to accomplish VQA including the result of extracting the mean of a picture made by Lawrence et al
 ## Approach
-<img src="/image/model.png" width="700", height="400">
 
-Figure 2.5-Layer (CNN + SLTM)
 
 * Our basic VQA model is according to VQA, the only modification depends on special case of this project---abstract images and ‘yes’ or ‘no’ answers. 
 * The CNN we used for image encoding is a simplification of VGG\_CNN\_F which has the same structure as Alexnet, but here, we made a little difference.
@@ -40,6 +38,9 @@ Figure 2.5-Layer (CNN + SLTM)
 * After that,  we used 2-layer and 512 dimension RNN+LSTM network to build a NLP model based on VQA, the dimension of the final output is also 1024.
 * Finally both the image and question features are transformed into a common space and fused via the full-connected layer followed by a 2-layer softmax layer and we got the final ‘Yes’ or ‘No’ result of a question.
 
+<img src="/image/model.png" width="700", height="400">
+
+Figure 2.5-Layer (CNN + SLTM)
 
 
 ## Specific training method:

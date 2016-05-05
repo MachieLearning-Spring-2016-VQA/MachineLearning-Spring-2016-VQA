@@ -16,7 +16,7 @@ The task of this project is given a abstract image and a natural language questi
 * Figure 1 is a sample 
 	* question for this image is "Is the dog chasing the butterfly?"
 	* <img src="/image/sample_image.png" width= "440" heigth="288">
-		*Figure 1. VQA Sample
+	<br>Figure 1. VQA Sample
 	* Test the image and question in our trained model
 	* Answer is "yes" for this question.
 	
@@ -89,7 +89,7 @@ Therefore, based on above analysis, we tried to do optimization in following 2 w
 Dropout means that we can temporarily remove some units out from the network along with all their incoming and outgoing connections, and the choice of which units to drop is random[1]. A ‘thinned’ network after applying dropout can prevent co-adaptation of units efficiently and then result in a more robust classifier. Figure 4 gives the comparison before and after applying dropout to a Neural Net. 
 
 <img src="/image/dropout.png">
-	<br>Figure 4. Dropout Result
+	<br><br>Figure 4. Dropout Result
 
 ### Optimize gradient descent
 We chose RMSprop along with learning rate decay to implement the optimization. 

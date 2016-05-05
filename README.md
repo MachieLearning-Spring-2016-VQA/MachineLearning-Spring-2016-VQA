@@ -25,7 +25,7 @@ The task of this project is given a abstract image and a natural language questi
 ## Background
 Alex K. Et al firstly accomplished the high-level convolutional neuron network, after that Y.jia.Et al made it possible to Use Caffe deep learning to accelerate the optimization of the model,Stanislaw A. Et al. Combined encoding and NLP to accomplish VQA including the result of extracting the mean of a picture made by Lawrence et al
 ## Approach
-	<img src="/image/model.png" width="700", height="400">
+<img src="/image/model.png" width="700", height="400">
 	Figure 2.5-Layer (CNN + SLTM)
 
 * Our basic VQA model is according to VQA, the only modification depends on special case of this project---abstract images and ‘yes’ or ‘no’ answers. 

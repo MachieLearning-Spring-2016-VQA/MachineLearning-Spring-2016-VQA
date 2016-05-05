@@ -28,10 +28,10 @@ Figure 1. VQA Sample
 Accuracy > 70%
 
 # Background
-Alex K. Et al.***[2]*** firstly accomplished the deep-level convolutional neuron network, after that Y.jia Et al.***[4]*** made it possible to Use Caffe deep learning framework to accelerate the optimization of the model, Stanislaw A. Et al.***[1]*** Combined image encoding and NLP to accomplish VQA including the result of extracting the semantics of image made by Lawrence et al.***[5]***
+Alex K. Et al.***[1]*** firstly accomplished the deep-level convolutional neuron network, after that Y.jia Et al.***[2]*** made it possible to Use Caffe deep learning framework to accelerate the optimization of the model, Stanislaw A. Et al.***[3]*** Combined image encoding and NLP to accomplish VQA including the result of extracting the semantics of image made by Lawrence et al.***[4]***
 # Approach
 * Our basic VQA model is according to VQA, the only modification depends on special case of this project---abstract images and ‘yes’ or ‘no’ answers. 
-* The CNN we used for image encoding is a simplification of [VGG\_CNN\_F](https://gist.github.com/ksimonyan/a32c9063ec8e1118221a#file-readme-md)***[3]*** which has the same structure as Alexnet, but here, we made a little difference.
+* The CNN we used for image encoding is a simplification of [VGG\_CNN\_F](https://gist.github.com/ksimonyan/a32c9063ec8e1118221a#file-readme-md)***[5]*** which has the same structure as Alexnet, but here, we made a little difference.
 * The CNN model consists of 5-layer convolutional neuron network, 3 max pooling layers and 2 full-connected layers. 
 	* The core of the first layer is 11×11, the stride is 4, and the total cores are 64. 
 	* The second-layer core is 5×5, stride 1, the total are 256, and the last 3 layers cores are 3×3, total is 256, see figure2.5-Layer (CNN + SLTM).
@@ -146,14 +146,14 @@ Duo Liu -------- project environment setup, experiments' data statistics and ana
 Yufeng Yuan -------- Dataset analysis, data preprocessing, coding for evaluation and other utilities, spreadsheet and paper work.
 
 # Reference
-> [1] Stanislaw Antol, Aishwarya Agrawal, Jiasen Lu, Margaret Mitchell,Dhruv Batra, C. Lawrence Zitnick, Devi Parik. VQA: Visual Question Answering, 2016
+> [1] A Krizhevsky, I Sutskever, GE Hinton, ImageNet Classification with Deep Convolutional Neural Networks, Advances in Neural Information Processing Systems 25 (NIPS 2012)   
 
-> [2] A Krizhevsky, I Sutskever, GE Hinton, ImageNet Classification with Deep Convolutional Neural Networks, Advances in Neural Information Processing Systems 25 (NIPS 2012)
+> [2] Y Jia, E Shelhamer, J Donahue, S Karayev, Caffe: Convolutional architecture for fast feature embedding, Proceedings of the 22nd ACM international conference on Multimedia
 
-> [3] K. Chatfield, K. Simonyan, A. Vedaldi, A. Zisserman, Return of the Devil in the Details: Delving Deep into Convolutional Nets. British Machine Vision Conference, 2014
+> [3] C. Lawrence Zitnick. Bringing Semantics Into Focus Using Visual Abstraction, CVPR, 2013  
 
-> [4] Y Jia, E Shelhamer, J Donahue, S Karayev, Caffe: Convolutional architecture for fast feature embedding, Proceedings of the 22nd ACM international conference on Multimedia
+> [4]  Stanislaw Antol, Aishwarya Agrawal, Jiasen Lu, Margaret Mitchell,Dhruv Batra, C. Lawrence Zitnick, Devi Parik. VQA: Visual Question Answering, 2016
 
-> [5] C. Lawrence Zitnick. Bringing Semantics Into Focus Using Visual Abstraction, CVPR, 2013
+> [5]  K. Chatfield, K. Simonyan, A. Vedaldi, A. Zisserman, Return of the Devil in the Details: Delving Deep into Convolutional Nets. British Machine Vision Conference, 2014
 
 > [6] N. Srivastava, G. Hinton, Dropout: A Simple Way to Prevent Neural Networks from Overftting. Journal of Machine Learning Research 15 (2014) 1929-1958

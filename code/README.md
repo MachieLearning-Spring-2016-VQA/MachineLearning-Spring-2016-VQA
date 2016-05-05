@@ -13,7 +13,9 @@ Installation:
 
 0. before doing preprocessing job, you need to install torch7/python2.7/cuda and other dependencies at first.
 	torch7: 	http://torch.ch/
+
 	cuda:		https://developer.nvidia.com/cuda-zone
+	
 	python2.7:	https://www.python.org/download/releases/2.7
 
 1. plz check VQA official website for preprocessing.

@@ -1,4 +1,4 @@
-Code copyrights:
+# Code copyrights:
 
 1.	data/vqa_preprocessing.py 			---- author: VQA, modified by jia wang
 2.	train_.lua 		 			---- author: VQA, modified by jia wang
@@ -9,7 +9,7 @@ Code copyrights:
 
 
 
-Installation:
+# Installation:
 
 0. before doing preprocessing job, you need to install torch7/python2.7/cuda and other dependencies at first.
 
